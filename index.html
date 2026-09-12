@@ -150,7 +150,7 @@
         <button type="button" onClick="{{ slide.go }}" aria-label="{{ slide.label }}" style="width:34px;height:2px;border:0;padding:0;cursor:pointer;background:{{ slide.dot }};transition:background .4s"></button>
       </sc-for>
     </div>
-    <div style="position:relative;padding:0 48px 88px;max-width:1000px">
+    <div style="position:relative;padding:0 clamp(20px,5vw,48px) 88px;max-width:1000px;margin:0 auto;width:100%">
       <p style="font-family:'Prata',serif;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:#7BE2D8;margin:0 0 24px">Private Tours</p>
       <h1 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(44px,6vw,88px);line-height:1.02;letter-spacing:.008em;color:#fff;margin:0;text-wrap:balance">Tailor-Made Food Experiences</h1>
       <p style="font-family:'Prata',serif;font-size:clamp(22px,2.4vw,34px);line-height:1.3;color:#fff;margin:18px 0 0">In Seville &amp; Andalucia</p>
@@ -162,7 +162,7 @@
     </div>
   </section>
 
-  <section style="padding:120px 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:80px;align-items:center;max-width:1440px;margin:0 auto">
+  <section style="padding:120px clamp(20px,5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:80px;align-items:center;max-width:1440px;margin:0 auto">
     <div>
       <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 28px">Unforgettable culinary journeys</p>
       <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.15;margin:0 0 32px;max-width:16em;color:#0C7A71">Discover Andalucía through its flavors</h2>
@@ -180,7 +180,7 @@
     </div>
   </section>
 
-  <section style="background:#0E2440;color:#F3EFE8;padding:110px 48px">
+  <section style="background:#0E2440;color:#F3EFE8;padding:110px clamp(20px,5vw,48px)">
     <div style="max-width:1440px;margin:0 auto">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:60px">
         <div>
@@ -189,7 +189,7 @@
         </div>
         <a href="https://flavorsofandalucia.com/best-private-tours-seville/" style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid #BC8B2E;padding-bottom:6px;color:#F3EFE8" style-hover="color:#BC8B2E">See all tours and experiences</a>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:34px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:34px">
         <a href="tour/best-tapas-tour/" style="display:block;color:#F3EFE8" style-hover="color:#BC8B2E">
           <div style="overflow:hidden;border-radius:6px"><img src="uploads/tapas-tour-seville-1.jpg" alt="Best tapas tour in Seville" style="width:100%;aspect-ratio:1;object-fit:cover;display:block" loading="lazy" decoding="async"></div>
           <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8FA9BD;margin:22px 0 10px">4 hours · Private · EN / NO</p>
@@ -224,10 +224,10 @@
     </div>
   </section>
 
-  <section style="padding:110px 48px;max-width:1440px;margin:0 auto">
+  <section style="padding:110px clamp(20px,5vw,48px);max-width:1440px;margin:0 auto">
     <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 24px">Find your reasons to Andalucía</p>
     <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.15;margin:0 0 56px;color:#9A6F1E">Four ways to travel with us</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:22px">
       <a href="food-wine-experiences-in-andalucia/" style="background:#FAF8F4;display:flex;flex-direction:column;color:#211E1A;border:1px solid #E4DDD1;border-radius:8px;overflow:hidden" style-hover="background:#F1EBE0">
         <img src="https://flavorsofandalucia.com/wp-content/uploads/elementor/thumbs/gast1-qeymn6a8d4rf16owgnrfm5846df9fj0c66om68fxx8.jpg" alt="Andalusian food and wine experiences" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy" decoding="async">
         <span style="padding:30px 30px 36px;display:flex;flex-direction:column;gap:14px">
@@ -260,15 +260,15 @@
     <p style="margin:44px 0 0;font-size:17px;line-height:1.8;color:#453F37;font-weight:400;max-width:62ch">Have something specific in mind for your trip to Andalucía? Whether it’s a brief day tour or an extended escorted journey, Gunvor and Flavors of Andalucia are here to help you uncover the finest local culture, cuisine, and lifestyle.</p>
   </section>
 
-  <section style="background:#F1EBE0;padding:110px 48px">
-    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:80px">
+  <section style="background:#F1EBE0;padding:110px clamp(20px,5vw,48px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:80px">
       <div>
         <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 24px">You can trust us</p>
         <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.2;margin:0 0 26px;color:#0C7A71">What they say about us</h2>
         <p style="font-size:15.5px;line-height:1.8;color:#4A4438;font-weight:400;margin:0">Flavors of Andalucia proudly presents a complete Luxury Concierge VIP Service in Andalucia. With our Seville based headquarter, we are honored to be your Travel Specialist &amp; Consultancy agency for your next Corporate Event and MICE Services as a renamed DMC.</p>
         <p style="font-size:15.5px;line-height:1.8;color:#4A4438;font-weight:400;margin:20px 0 0">We also work hand in hand with travel advisors and agencies in the US and Northern Europe, on net rates. <a href="travel-agencies-and-group-travel-seville/">For travel advisors and groups</a></p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#DED7CB">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:#DED7CB">
         <blockquote style="background:#F1EBE0;margin:0;padding:36px 34px">
           <p style="font-family:'Prata',serif;font-size:18px;line-height:1.6;margin:0 0 22px;color:#211E1A">Gunvor was a fabulous guide on our food tour! She took us to great local places and gave great explanations of all the food we sampled. A joy to be with!</p>
           <footer style="font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#635C50">Mary Jo, USA — Tapas Tour</footer>
@@ -289,10 +289,10 @@
     </div>
   </section>
 
-  <section style="padding:110px 48px 0;max-width:1440px;margin:0 auto">
+  <section style="padding:110px clamp(20px,5vw,48px) 0;max-width:1440px;margin:0 auto">
     <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 24px">Photo gallery</p>
     <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.15;margin:0 0 48px;color:#9A6F1E">Be inspired</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:14px">
       <img src="https://flavorsofandalucia.com/wp-content/uploads/elementor/thumbs/romeria1-qezv0ptdvdodak66xpfrvie2atc8oa54tac6d9r0qk.jpg" alt="Romería in Andalucía" style="width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:4px" loading="lazy" decoding="async">
       <img src="https://flavorsofandalucia.com/wp-content/uploads/elementor/thumbs/gast1-qeymn6a8d4rf16owgnrfm5846df9fj0c66om68fxx8.jpg" alt="Andalusian gastronomy" style="width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:4px" loading="lazy" decoding="async">
       <img src="https://flavorsofandalucia.com/wp-content/uploads/elementor/thumbs/private-celebrations-spain-qeg5vojbumcnzyiqkn25no9kaqpfxdn2wajow1wm7w.jpg" alt="Private celebrations in Spain" style="width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:4px" loading="lazy" decoding="async">
@@ -304,7 +304,7 @@
     </div>
   </section>
 
-  <section style="padding:110px 48px;max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:80px;align-items:start">
+  <section style="padding:110px clamp(20px,5vw,48px);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:80px;align-items:start">
     <div>
       <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 24px">What we do</p>
       <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.15;margin:0 0 30px;color:#0C7A71">Book your experience</h2>
@@ -321,7 +321,7 @@
     </div>
   </section>
 
-  <section style="background:#0E2440;color:#F3EFE8;padding:110px 48px">
+  <section style="background:#0E2440;color:#F3EFE8;padding:110px clamp(20px,5vw,48px)">
     <div style="max-width:1440px;margin:0 auto">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:52px">
         <div>
@@ -330,7 +330,7 @@
         </div>
         <a href="https://flavorsofandalucia.com/gastronomy-art-blog-sevilla/" style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid #BC8B2E;padding-bottom:6px;color:#F3EFE8" style-hover="color:#BC8B2E">All posts</a>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1px;background:#27476B">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:1px;background:#27476B">
         <a href="https://flavorsofandalucia.com/2024/01/16/6-great-food-shops-in-seville/" style="background:#0E2440;padding:34px 30px 40px;color:#F3EFE8;display:block" style-hover="background:#16345C">
           <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#BC8B2E;margin:0 0 18px">Best experience travel</p>
           <h3 style="font-family:'Prata',serif;font-weight:400;font-size:25px;line-height:1.25;margin:0">6 great food shops in Seville</h3>
@@ -347,11 +347,11 @@
     </div>
   </section>
 
-  <section style="background:#F1EBE0;padding:100px 48px">
+  <section style="background:#F1EBE0;padding:100px clamp(20px,5vw,48px)">
     <div style="max-width:1440px;margin:0 auto">
       <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 24px">Good to know</p>
       <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(28px,3vw,42px);line-height:1.15;margin:0 0 52px;color:#9A6F1E">Questions about our private tours in Seville</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px 64px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:48px 64px">
         <div>
           <h3 style="font-family:'Prata',serif;font-weight:400;font-size:23px;line-height:1.3;margin:0 0 14px;color:#211E1A">What does Flavors of Andalucia do?</h3>
           <p style="margin:0;font-size:16px;line-height:1.8;color:#453F37;font-weight:400;max-width:52ch">We are a licensed Seville travel agency, owned by Come to Spain Events SLU (licence C.I.AN-41-7397-2). We run private food and wine experiences in and around Seville, design tailor-made itineraries across Andalucía, and put together programmes for groups and travel advisors.</p>
@@ -380,7 +380,7 @@
     </div>
   </section>
 
-  <section style="padding:110px 48px;text-align:center;max-width:820px;margin:0 auto">
+  <section style="padding:110px clamp(20px,5vw,48px);text-align:center;max-width:820px;margin:0 auto">
     <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 26px">Be the first</p>
     <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.15;margin:0 0 22px">Register to our newsletter</h2>
     <p style="font-size:17px;line-height:1.8;color:#453F37;font-weight:400;margin:0 auto 38px;max-width:52ch">We create new vibes in travel experiences. Get our itineraries, hidden destinations and seasonal tables before anyone else.</p>
@@ -391,8 +391,8 @@
     <p style="margin:16px 0 0;font-size:13px;color:#8A8275;min-height:20px">{{ signupNote }}</p>
   </section>
 
-  <footer style="background:#0A1A2E;color:#A7BCCB;padding:76px 48px 40px">
-    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:56px;padding-bottom:56px;border-bottom:1px solid #1D3A5C">
+  <footer style="background:#0A1A2E;color:#A7BCCB;padding:76px clamp(20px,5vw,48px) 40px">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:56px;padding-bottom:56px;border-bottom:1px solid #1D3A5C">
       <div>
         <img src="uploads/logo_home_white_.png" alt="Flavors of Andalucia" style="height:58px;width:auto;display:block;margin-bottom:24px">
         <p style="margin:0;font-size:14.5px;line-height:1.8;font-weight:400;max-width:34ch">Luxury Concierge VIP Service, food &amp; wine tours and destination management, headquartered in Seville.</p>
