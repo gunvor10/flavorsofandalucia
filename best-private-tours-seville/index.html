@@ -3,13 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
+<!-- seo-fix: static head tags + JSON-LD (tools/seo_fix.py) -->
 <title>Seville Food Tours: Taste Tapas &amp; Beyond in Andalucia</title>
 <meta name="description" content="Our delicious tours showcase hidden gems &amp; iconic tapas bars. Find the best food tour in Seville &amp; top places to eat!">
 <link rel="canonical" href="https://flavorsofandalucia.com/best-private-tours-seville/">
@@ -23,6 +17,15 @@
 <meta property="og:url" content="https://flavorsofandalucia.com/best-private-tours-seville/">
 <meta property="og:image" content="https://flavorsofandalucia.com/uploads/tapas-tour-seville-1.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Tours & Experiences — Flavors of Andalucia", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "../tour/best-tapas-tour/", "name": "Best Tapas Tour", "image": "../uploads/tapas-tour-seville-1.jpg"}, {"@type": "ListItem", "position": 2, "url": "../tour/tasting-market-tapas-lunch-tour/", "name": "Tasting Market Tapas Tour", "image": "../uploads/market-tapas-tour-tasting-6.jpg"}, {"@type": "ListItem", "position": 3, "url": "../tour/tapas-flamenco-performance/", "name": "Tapas & flamenco performance", "image": "../uploads/fine-dine-flamenco-performence.jpg"}, {"@type": "ListItem", "position": 4, "url": "../tour/horse-carriage-and-tapas-in-santa-cruz/", "name": "Horse carriage and tapas in Santa Cruz", "image": "../uploads/private-seville-horse-carriage-sightseeing-16.jpg"}, {"@type": "ListItem", "position": 5, "url": "../tour/private-paella-cooking-lesson/", "name": "Private Paella Cooking Lesson", "image": "../uploads/paella-cathedral-1.jpg"}, {"@type": "ListItem", "position": 6, "url": "../tour/luxury-dinner-in-yacht-seville-2/", "name": "Luxury dinner in Yacht Seville", "image": "../uploads/yacht-solnedgang-guadalquivir.jpg"}, {"@type": "ListItem", "position": 7, "url": "../tour/spanish-wine-tasting-with-dinner-seville/", "name": "Spanish wine tasting with dinner", "image": "../uploads/wine-tastings-seville-29.jpg"}, {"@type": "ListItem", "position": 8, "url": "../tour/seville-sightseeing-ham-cheese-wine-tasting/", "name": "Seville Sightseeing ham cheese wine tasting", "image": "../uploads/flavors-of-andalucia-culinary-tastings-1.jpg"}, {"@type": "ListItem", "position": 9, "url": "../tour/private-aracena-iberian-ham-tour/", "name": "Private Aracena Iberian ham tour", "image": "../uploads/pig-farm-aracena-visit8.jpg"}, {"@type": "ListItem", "position": 10, "url": "../tour/olive-oil-estate-visit-seville/", "name": "Olive oil estate visit", "image": "../uploads/hacienda-Guzman-Olivoteca-sevilla.jpg"}]}</script>
+
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -223,7 +226,7 @@
         <span>Milano Govinda 35 — 41020 Sevilla</span>
       </div>
     </div>
-    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2025 Flavors of Andalucia</p>
+    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2026 Flavors of Andalucia</p>
   </footer>
   <a href="https://wa.me/34637878768" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0E2440;color:#fff;padding:14px 22px;border-radius:999px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 26px rgba(10,26,46,.28)" style-hover="background:#BC8B2E;color:#241C0C">WhatsApp</a>
 
@@ -288,8 +291,8 @@ class Component extends DCLogic {
     { title: "Luxury dinner in Yacht Seville", meta: "2–3 hours · Max 14 aboard · EN / NO", cat: "city", url: "../tour/luxury-dinner-in-yacht-seville-2/", img: "../uploads/yacht-solnedgang-guadalquivir.jpg" },
     { title: "Spanish wine tasting with dinner", meta: "2 hours · Sommelier-hosted · Up to 14", cat: "city", url: "../tour/spanish-wine-tasting-with-dinner-seville/", img: "../uploads/wine-tastings-seville-29.jpg" },
     { title: "Seville Sightseeing ham cheese wine tasting", meta: "2 hours · Private walk · NO / SE / DK / EN", cat: "sight", url: "../tour/seville-sightseeing-ham-cheese-wine-tasting/", img: "../uploads/flavors-of-andalucia-culinary-tastings-1.jpg" },
-    { title: "Private Aracena Iberian ham tour", meta: "9 hours · Private day trip · From 201 €", cat: "daytrip", url: "../tour/private-aracena-iberian-ham-tour/", img: "../uploads/pig-farm-aracena-visit8.jpg" },
-    { title: "Olive oil estate visit", meta: "1.5–2.5 hours · Private · From 55 €", cat: "daytrip", url: "../tour/olive-oil-estate-visit-seville/", img: "../uploads/hacienda-Guzman-Olivoteca-sevilla.jpg" }
+    { title: "Private Aracena Iberian ham tour", meta: "9 hours · Private day trip", cat: "daytrip", url: "../tour/private-aracena-iberian-ham-tour/", img: "../uploads/pig-farm-aracena-visit8.jpg" },
+    { title: "Olive oil estate visit", meta: "1.5–2.5 hours · Private", cat: "daytrip", url: "../tour/olive-oil-estate-visit-seville/", img: "../uploads/hacienda-Guzman-Olivoteca-sevilla.jpg" }
   ];
   componentDidMount() {
     const ld = {
@@ -301,7 +304,7 @@ class Component extends DCLogic {
       }))
     };
     const s = document.createElement("script");
-    s.type = "application/ld+json";
+    s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify(ld);
     document.head.appendChild(s);
   }

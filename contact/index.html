@@ -3,13 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
+<!-- seo-fix: static head tags + JSON-LD (tools/seo_fix.py) -->
 <title>Contact - Flavors of Andalucia</title>
 <meta name="description" content="Contact Flavors of Andalucia in Seville: hello@flavorsofandalucia.com, +34 637 87 87 68, or send an enquiry for a private tour or a tailor-made trip.">
 <link rel="canonical" href="https://flavorsofandalucia.com/contact/">
@@ -23,6 +17,16 @@
 <meta property="og:url" content="https://flavorsofandalucia.com/contact/">
 <meta property="og:image" content="https://flavorsofandalucia.com/uploads/barrio-santa-cruz.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "url": "https://flavorsofandalucia.com/contact/", "name": "Contact - Flavors of Andalucia", "mainEntity": {"@type": "TravelAgency", "name": "Flavors of Andalucia", "email": "hello@flavorsofandalucia.com", "telephone": "+34 637 87 87 68", "url": "https://flavorsofandalucia.com/", "address": {"@type": "PostalAddress", "streetAddress": "Milano Govinda 35", "postalCode": "41020", "addressLocality": "Sevilla", "addressCountry": "ES"}, "contactPoint": {"@type": "ContactPoint", "contactType": "reservations", "email": "hello@flavorsofandalucia.com", "telephone": "+34 637 87 87 68", "availableLanguage": ["en", "es", "no"]}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://flavorsofandalucia.com/contact/", "mainEntity": [{"@type": "Question", "name": "How quickly will I hear back?", "acceptedAnswer": {"@type": "Answer", "text": "Enquiries are answered personally, normally within 24 hours. Nothing is booked until you confirm."}}, {"@type": "Question", "name": "Can I book by phone or WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Call or WhatsApp +34 637 87 87 68, or email hello@flavorsofandalucia.com."}}, {"@type": "Question", "name": "How do I pay?", "acceptedAnswer": {"@type": "Answer", "text": "We gladly accept online payment by credit card with Stripe."}}, {"@type": "Question", "name": "What does a tour cost?", "acceptedAnswer": {"@type": "Answer", "text": "Prices depend on group size and on what the programme includes, so we quote each enquiry individually."}}, {"@type": "Question", "name": "Are you a licensed travel agency?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Flavors of Andalucia is operated by Come to Spain Events SLU, a legally constituted Spanish travel agency, licence C.I.AN-41- 7397-2, VAT ESB 90380494. See our travel guarantee."}}, {"@type": "Question", "name": "Do you work with travel advisors and agencies?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work with travel advisors, agencies and tour operators on net rates, which are not commissionable — you add your own margin. See travel advisors and groups."}}]}</script>
+
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -258,7 +262,7 @@
         <span>Milano Govinda 35 — 41020 Sevilla</span>
       </div>
     </div>
-    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2025 Flavors of Andalucia</p>
+    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2026 Flavors of Andalucia</p>
   </footer>
   <a href="https://wa.me/34637878768" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0E2440;color:#fff;padding:14px 22px;border-radius:999px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 26px rgba(10,26,46,.28)" style-hover="background:#BC8B2E;color:#241C0C">WhatsApp</a>
 
@@ -310,7 +314,7 @@ class Component extends DCLogic {
   state = { note: "" };
   componentDidMount() {
     const s = document.createElement("script");
-    s.type = "application/ld+json";
+    s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ContactPage",
@@ -344,7 +348,7 @@ class Component extends DCLogic {
     });
     document.head.appendChild(s);
     const faq = document.createElement("script");
-    faq.type = "application/ld+json";
+    faq.type = "application/x-ld-json-static-in-head";
     faq.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",

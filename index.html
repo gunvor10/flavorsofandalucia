@@ -3,11 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<!-- seo-fix: static head tags + JSON-LD (tools/seo_fix.py) -->
 <title>Seville Food &amp; Wine Tours | Private Tapas &amp; Luxury Travel</title>
 <meta name="description" content="Explore Seville's flavors! Private tours, tapas crawls, &amp; luxury experiences: food lover destinations, best restaurants, &amp; expert guides.">
 <link rel="canonical" href="https://flavorsofandalucia.com/">
@@ -22,6 +18,15 @@
 <meta property="og:url" content="https://flavorsofandalucia.com/">
 <meta property="og:image" content="https://flavorsofandalucia.com/uploads/market-tapas-tour-header.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Flavors of Andalucia", "url": "https://flavorsofandalucia.com/", "inLanguage": "en-GB", "publisher": {"@type": "Organization", "name": "Flavors of Andalucia"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TravelAgency", "name": "Flavors of Andalucia", "url": "https://flavorsofandalucia.com/", "description": "Private food and wine tours, tapas crawls and luxury experiences in Seville and Andalucía.", "email": "hello@flavorsofandalucia.com", "telephone": "+34 637 87 87 68", "priceRange": "$$$", "image": "https://flavorsofandalucia.com/uploads/market-tapas-tour-header.jpg", "address": {"@type": "PostalAddress", "streetAddress": "Milano Govinda 35", "postalCode": "41020", "addressLocality": "Sevilla", "addressCountry": "ES"}, "areaServed": ["Andalucía", "Seville", "Jerez de la Frontera", "Cádiz", "Aracena", "Granada"], "knowsLanguage": ["en", "no", "sv", "da"], "sameAs": ["https://flavorsofandalucia.com/about-us/"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Seville Sightseeing ham cheese wine tasting", "url": "https://flavorsofandalucia.com/tour/seville-sightseeing-ham-cheese-wine-tasting/"}}, {"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Luxury dinner in Yacht Seville", "url": "https://flavorsofandalucia.com/tour/luxury-dinner-in-yacht-seville-2/"}}, {"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Tasting Market Tapas Tour", "url": "https://flavorsofandalucia.com/tour/tasting-market-tapas-lunch-tour/"}}], "@id": "https://flavorsofandalucia.com/#travelagency", "legalName": "Come to Spain Events SLU", "founder": {"@type": "Person", "name": "Gunvor Guttormsen"}, "identifier": {"@type": "PropertyValue", "propertyID": "Licencia de agencia de viajes (Junta de Andalucía)", "value": "C.I.AN-41-7397-2"}, "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+34 637 87 87 68", "email": "hello@flavorsofandalucia.com", "availableLanguage": ["en", "no", "sv", "da"]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://flavorsofandalucia.com/", "mainEntity": [{"@type": "Question", "name": "What does Flavors of Andalucia do?", "acceptedAnswer": {"@type": "Answer", "text": "We are a licensed Seville travel agency, owned by Come to Spain Events SLU (licence C.I.AN-41-7397-2). We run private food and wine experiences in and around Seville, design tailor-made itineraries across Andalucía, and put together programmes for groups and travel advisors."}}, {"@type": "Question", "name": "Are your tours private?", "acceptedAnswer": {"@type": "Answer", "text": "Every tour we run ourselves is private — your party only, never joined by strangers. A few activities we recommend are run by partners and shared with a small group; those pages say so plainly."}}, {"@type": "Question", "name": "Which languages do you guide in?", "acceptedAnswer": {"@type": "Answer", "text": "Gunvor is an authorised guide in English and Norwegian, and also guides Swedish and Danish. Partner guides cover French, German, Italian, Portuguese, Spanish and Polish."}}, {"@type": "Question", "name": "Do I have to pay in advance?", "acceptedAnswer": {"@type": "Answer", "text": "No prepayment is needed on our own tours. You confirm by email or WhatsApp and pay on the day. Activities booked through a partner follow the partner’s own terms."}}, {"@type": "Question", "name": "Where do the tours start?", "acceptedAnswer": {"@type": "Answer", "text": "In central Seville, with the exact meeting point sent when your booking is confirmed. Several tours can start at your hotel instead — just ask."}}, {"@type": "Question", "name": "Can you build something that is not on the website?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Most of our work is tailor-made: tell us who is travelling, how long you have and what you like eating, and we shape the days around that."}}]}</script>
+
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
 <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -151,8 +156,8 @@
     </div>
     <div style="position:relative;padding:0 clamp(20px,5vw,48px) 88px;max-width:1000px;margin:0 auto;width:100%">
       <p style="font-family:'Prata',serif;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:#7BE2D8;margin:0 0 24px">Private Tours</p>
-      <h1 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(44px,6vw,88px);line-height:1.02;letter-spacing:.008em;color:#fff;margin:0;text-wrap:balance">Tailor-Made Food Experiences</h1>
-      <p style="font-family:'Prata',serif;font-size:clamp(22px,2.4vw,34px);line-height:1.3;color:#fff;margin:18px 0 0">In Seville &amp; Andalucia</p>
+      <h1 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(38px,5vw,72px);line-height:1.08;letter-spacing:.008em;color:#fff;margin:0;text-wrap:balance">Private Food Tours &amp; Tailor-Made Food Experiences in Seville</h1>
+      <p style="font-family:'Prata',serif;font-size:clamp(22px,2.4vw,34px);line-height:1.3;color:#fff;margin:18px 0 0">&amp; across Andalucia</p>
       <p style="max-width:560px;margin:30px 0 0;font-size:17px;line-height:1.7;color:rgba(255,255,255,.82);font-weight:400">Private tours, tapas crawls and luxury experiences — crafted exclusively for you by a small team of passionate local experts.</p>
       <div style="display:flex;gap:14px;margin-top:40px;flex-wrap:wrap">
         <a href="./best-private-tours-seville/" style="background:#0C7A71;color:#fff;padding:16px 34px;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase" style-hover="background:#fff;color:#211E1A">Book a tour</a>
@@ -216,7 +221,7 @@
         </a>
         <a href="tour/private-aracena-iberian-ham-tour/" style="display:block;color:#F3EFE8" style-hover="color:#BC8B2E">
           <div style="overflow:hidden;border-radius:6px"><img src="uploads/pig-farm-aracena-visit8.jpg" alt="Iberian pigs among the oaks of the Sierra de Aracena" style="width:100%;aspect-ratio:1;object-fit:cover;display:block" loading="lazy" decoding="async"></div>
-          <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8FA9BD;margin:22px 0 10px">9 hours · Private day trip · From 201 €</p>
+          <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8FA9BD;margin:22px 0 10px">9 hours · Private day trip</p>
           <h3 style="font-family:'Prata',serif;font-weight:400;font-size:24px;line-height:1.25;margin:0">Private Aracena Iberian ham tour</h3>
         </a>
       </div>
@@ -264,8 +269,7 @@
       <div>
         <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 24px">You can trust us</p>
         <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.2;margin:0 0 26px;color:#0C7A71">What they say about us</h2>
-        <p style="font-size:15.5px;line-height:1.8;color:#4A4438;font-weight:400;margin:0">Flavors of Andalucia proudly presents a complete Luxury Concierge VIP Service in Andalucia. With our Seville based headquarter, we are honored to be your Travel Specialist &amp; Consultancy agency for your next Corporate Event and MICE Services as a renamed DMC.</p>
-        <p style="font-size:15.5px;line-height:1.8;color:#4A4438;font-weight:400;margin:20px 0 0">We also work hand in hand with travel advisors and agencies in the US and Northern Europe, on net rates. <a href="travel-agencies-and-group-travel-seville/">For travel advisors and groups</a></p>
+        <p style="font-size:15.5px;line-height:1.8;color:#4A4438;font-weight:400;margin:0">We also work with travel advisors and agencies on net rates. <a href="travel-agencies-and-group-travel-seville/">For travel advisors and groups</a></p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:#DED7CB">
         <blockquote style="background:#F1EBE0;margin:0;padding:36px 34px">
@@ -308,15 +312,14 @@
       <p style="font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#0C7A71;margin:0 0 24px">What we do</p>
       <h2 style="font-family:'Prata',serif;font-weight:400;font-size:clamp(30px,3.2vw,44px);line-height:1.15;margin:0 0 30px;color:#0C7A71">Book your experience</h2>
       <div style="display:flex;flex-direction:column;gap:20px;font-size:17px;line-height:1.8;color:#453F37;font-weight:400;max-width:56ch">
-        <p style="margin:0">We have scoured Andalucia to find the best and most exciting itineraries. Andalucia as well as Spain boasts gorgeous architecture, medieval cobbled streets, fairytale charm and oozing with history. As a cultural luxury travel destination as well as a culinary jewel for food lovers, Andalucia will for sure overgo your expectations.</p>
-        <p style="margin:0">Just a few hours’ reach from the major European cities, makes Spain and Andalucia a popular choice for weekend city breaks and holidays.</p>
+        <p style="margin:0">We have travelled Andalucia extensively to select the finest itineraries in the region. Moorish palaces, medieval cobbled streets and centuries of living history make it one of Europe’s great cultural destinations, and one of its finest for anyone who loves food and wine. Every experience is planned to exceed your expectations.</p>
+        <p style="margin:0">With direct flights from most major European cities, Seville and Andalucia are an easy choice for a city break or a longer holiday.</p>
       </div>
       <a href="./best-private-tours-seville/" style="display:inline-block;margin-top:38px;background:#211E1A;color:#fff;padding:16px 38px;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase" style-hover="background:#0C7A71">Book now</a>
     </div>
     <div style="display:grid;gap:1px;background:#DED7CB;border-top:1px solid #DED7CB;border-bottom:1px solid #DED7CB">
       <div style="background:#FAF8F4;padding:30px 0"><h3 style="font-family:'Prata',serif;font-weight:400;font-size:26px;margin:0 0 8px">Food &amp; Wine</h3><p style="margin:0;font-size:15px;color:#544D42;font-weight:400">Selected food and wine tours in Andalucia and the rest of Spain’s amazing wine regions.</p></div>
-      <div style="background:#FAF8F4;padding:30px 0"><h3 style="font-family:'Prata',serif;font-weight:400;font-size:26px;margin:0 0 8px">Wedding Planner</h3><p style="margin:0;font-size:15px;color:#544D42;font-weight:400">Our exclusive Wedding planner Service, from ceremony to celebration.</p></div>
-      <div style="background:#FAF8F4;padding:30px 0"><h3 style="font-family:'Prata',serif;font-weight:400;font-size:26px;margin:0 0 8px">Destination Management</h3><p style="margin:0;font-size:15px;color:#544D42;font-weight:400">Corporate Event and MICE Services as a renowned DMC, headquartered in Seville.</p></div>
+      <div style="background:#FAF8F4;padding:30px 0"><p style="margin:0;font-size:15px;line-height:1.7;color:#544D42;font-weight:400">For groups and MICE, see our sister brand <a href="https://dmcsevilleevent.com" style="color:#0C7A71;text-decoration:underline">DMC Seville Event</a>. For weddings, <a href="https://sevillaevent.com" style="color:#0C7A71;text-decoration:underline">Sevilla Event</a>.</p></div>
     </div>
   </section>
 
@@ -417,7 +420,7 @@
         <span>Milano Govinda 35 — 41020 Sevilla</span>
       </div>
     </div>
-    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2025 Flavors of Andalucia</p>
+    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2026 Flavors of Andalucia</p>
   </footer>
   <a href="https://wa.me/34637878768" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0E2440;color:#fff;padding:14px 22px;border-radius:999px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 26px rgba(10,26,46,.28)" style-hover="background:#BC8B2E;color:#241C0C">WhatsApp</a>
 
@@ -505,15 +508,15 @@ class Component extends DCLogic {
       publisher: { "@type": "Organization", name: "Flavors of Andalucia" }
     };
     const siteScript = document.createElement("script");
-    siteScript.type = "application/ld+json";
+    siteScript.type = "application/x-ld-json-static-in-head";
     siteScript.textContent = JSON.stringify(site);
     document.head.appendChild(siteScript);
     const s = document.createElement("script");
-    s.type = "application/ld+json";
+    s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify(ld);
     document.head.appendChild(s);
     const faqScript = document.createElement("script");
-    faqScript.type = "application/ld+json";
+    faqScript.type = "application/x-ld-json-static-in-head";
     faqScript.textContent = "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"url\":\"https://flavorsofandalucia.com/\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What does Flavors of Andalucia do?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We are a licensed Seville travel agency, owned by Come to Spain Events SLU (licence C.I.AN-41-7397-2). We run private food and wine experiences in and around Seville, design tailor-made itineraries across Andalucía, and put together programmes for groups and travel advisors.\"}},{\"@type\":\"Question\",\"name\":\"Are your tours private?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Every tour we run ourselves is private — your party only, never joined by strangers. A few activities we recommend are run by partners and shared with a small group; those pages say so plainly.\"}},{\"@type\":\"Question\",\"name\":\"Which languages do you guide in?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Gunvor is an authorised guide in English and Norwegian, and also guides Swedish and Danish. Partner guides cover French, German, Italian, Portuguese, Spanish and Polish.\"}},{\"@type\":\"Question\",\"name\":\"Do I have to pay in advance?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No prepayment is needed on our own tours. You confirm by email or WhatsApp and pay on the day. Activities booked through a partner follow the partner’s own terms.\"}},{\"@type\":\"Question\",\"name\":\"Where do the tours start?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"In central Seville, with the exact meeting point sent when your booking is confirmed. Several tours can start at your hotel instead — just ask.\"}},{\"@type\":\"Question\",\"name\":\"Can you build something that is not on the website?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Most of our work is tailor-made: tell us who is travelling, how long you have and what you like eating, and we shape the days around that.\"}}]}";
     document.head.appendChild(faqScript);
     this.play();

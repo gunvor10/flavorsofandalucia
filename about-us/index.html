@@ -3,13 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
+<!-- seo-fix: static head tags + JSON-LD (tools/seo_fix.py) -->
 <title>About Us - Flavors of Andalucia</title>
 <meta name="description" content="About us Flavors of Andalucia, read about the person behind Flavors of Andalucia, see how we work and what is our passion.">
 <link rel="canonical" href="https://flavorsofandalucia.com/about-us/">
@@ -23,6 +17,16 @@
 <meta property="og:url" content="https://flavorsofandalucia.com/about-us/">
 <meta property="og:image" content="https://flavorsofandalucia.com/uploads/gunvor-foran-macarena-kirken-sevilla.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "url": "https://flavorsofandalucia.com/about-us/", "name": "About Us - Flavors of Andalucia", "mainEntity": {"@type": "Person", "name": "Gunvor Guttormsen", "jobTitle": "Founder and licensed official guide", "nationality": "Norwegian", "worksFor": {"@type": "TravelAgency", "name": "Flavors of Andalucia", "url": "https://flavorsofandalucia.com/"}, "knowsLanguage": ["en", "no", "sv", "da"], "image": "https://flavorsofandalucia.com/uploads/gunvor-foran-macarena-kirken-sevilla.jpg"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://flavorsofandalucia.com/about-us/", "mainEntity": [{"@type": "Question", "name": "Who will guide me in Seville?", "acceptedAnswer": {"@type": "Answer", "text": "Gunvor Guttormsen, the founder of Flavors of Andalucia. She is Norwegian-born, has lived in Seville for over 30 years and works as a fully licensed official guide in Seville and Andalucía."}}, {"@type": "Question", "name": "Which languages are the tours in?", "acceptedAnswer": {"@type": "Answer", "text": "English, Spanish, French, German, Italian, Norwegian, Swedish and Danish, with licensed authorised guides."}}, {"@type": "Question", "name": "Are your guides officially licensed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every guide is an officially licensed and authorised guide, which also gives access to monuments and sites that unlicensed tours cannot enter."}}, {"@type": "Question", "name": "Can you plan a whole trip, not just one tour?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. From a single day tour to a fully customized journey, we plan and operate the whole programme, including transport, restaurants, guides and accommodation."}}, {"@type": "Question", "name": "Where do you operate?", "acceptedAnswer": {"@type": "Answer", "text": "Seville and all of Andalucía, including Cádiz, Jerez, Huelva, Ronda, Granada and Córdoba, and food and wine regions elsewhere in Spain."}}, {"@type": "Question", "name": "How do I get in touch?", "acceptedAnswer": {"@type": "Answer", "text": "Write to hello@flavorsofandalucia.com, call or WhatsApp +34 637 87 87 68, or send an enquiry from the contact page."}}]}</script>
+
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -270,7 +274,7 @@
         <span>Milano Govinda 35 — 41020 Sevilla</span>
       </div>
     </div>
-    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2025 Flavors of Andalucia</p>
+    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2026 Flavors of Andalucia</p>
   </footer>
   <a href="https://wa.me/34637878768" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0E2440;color:#fff;padding:14px 22px;border-radius:999px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 26px rgba(10,26,46,.28)" style-hover="background:#BC8B2E;color:#241C0C">WhatsApp</a>
 
@@ -325,7 +329,7 @@ class Component extends DCLogic {
   ];
   componentDidMount() {
     const s = document.createElement("script");
-    s.type = "application/ld+json";
+    s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "AboutPage",
@@ -352,7 +356,7 @@ class Component extends DCLogic {
     });
     document.head.appendChild(s);
     const faq = document.createElement("script");
-    faq.type = "application/ld+json";
+    faq.type = "application/x-ld-json-static-in-head";
     faq.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",

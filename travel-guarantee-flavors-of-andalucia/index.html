@@ -3,13 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
+<!-- seo-fix: static head tags + JSON-LD (tools/seo_fix.py) -->
 <title>Travel Guarantee Flavors of Andalucia - Travel Safe</title>
 <meta name="description" content="Travel Guarantee Flavors of Andalucia, Feel Safe when you book your trip with a trusted Incoming travel agency based in Seville.">
 <link rel="canonical" href="https://flavorsofandalucia.com/travel-guarantee-flavors-of-andalucia/">
@@ -23,6 +17,16 @@
 <meta property="og:url" content="https://flavorsofandalucia.com/travel-guarantee-flavors-of-andalucia/">
 <meta property="og:image" content="https://flavorsofandalucia.com/uploads/logo-vector-turismo-espana.jpg.webp">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TravelAgency", "name": "Flavors of Andalucia", "legalName": "Come to Spain Events SLU", "url": "https://flavorsofandalucia.com/travel-guarantee-flavors-of-andalucia/", "description": "Travel Guarantee Flavors of Andalucia. Licensed and insured incoming travel agency and DMC based in Seville.", "email": "hello@flavorsofandalucia.com", "telephone": "+34 637 87 87 68", "vatID": "ESB 90380494", "identifier": "C.I.AN-41- 7397-2", "address": {"@type": "PostalAddress", "streetAddress": "Milano Govinda 35", "postalCode": "41020", "addressLocality": "Sevilla", "addressCountry": "ES"}, "areaServed": "Andalucía, Spain"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://flavorsofandalucia.com/travel-guarantee-flavors-of-andalucia/", "mainEntity": [{"@type": "Question", "name": "Is Flavors of Andalucia a licensed travel agency?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The website is owned by Come to Spain Events SLU, a legally constituted Spanish travel agency with headquarters in Seville. Our company licence is C.I.AN-41- 7397-2."}}, {"@type": "Question", "name": "What is your VAT number?", "acceptedAnswer": {"@type": "Answer", "text": "Our international VAT number is ESB 90380494."}}, {"@type": "Question", "name": "Am I financially protected if something goes wrong?", "acceptedAnswer": {"@type": "Answer", "text": "We satisfy all requirements for guarantees and insurances in case of bankruptcy, and for responsibilities in case of possible accidents or other damages connected with any tour we organize. Our insurance meets all Spanish Travel Guarantee schemes that we place with the Junta de Andalucía."}}, {"@type": "Question", "name": "Are you an authorised DMC?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We hold an establishment licence showing that we meet all local requirements set by the authorities for an authorised DMC."}}, {"@type": "Question", "name": "Do you hold any quality certification?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We have achieved the quality certificate and are included in the SICTED programme for tourist companies committed to Tourism Quality."}}, {"@type": "Question", "name": "Who do I contact about insurance or licences?", "acceptedAnswer": {"@type": "Answer", "text": "Write to hello@flavorsofandalucia.com and we will send the documentation you need."}}]}</script>
+
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -254,7 +258,7 @@
         <span>Milano Govinda 35 — 41020 Sevilla</span>
       </div>
     </div>
-    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2025 Flavors of Andalucia</p>
+    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2026 Flavors of Andalucia</p>
   </footer>
   <a href="https://wa.me/34637878768" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0E2440;color:#fff;padding:14px 22px;border-radius:999px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 26px rgba(10,26,46,.28)" style-hover="background:#BC8B2E;color:#241C0C">WhatsApp</a>
 
@@ -303,7 +307,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     const s = document.createElement("script");
-    s.type = "application/ld+json";
+    s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "TravelAgency",
@@ -326,7 +330,7 @@ class Component extends DCLogic {
     });
     document.head.appendChild(s);
     const faq = document.createElement("script");
-    faq.type = "application/ld+json";
+    faq.type = "application/x-ld-json-static-in-head";
     faq.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",

@@ -3,13 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
+<!-- seo-fix: static head tags + JSON-LD (tools/seo_fix.py) -->
 <title>Bespoke Private Tours Spain - Flavors of Andalucia</title>
 <meta name="description" content="Bespoke Private Tours Spain - Selected tours and food experiences for your family and small group party. Tailor made down to your wishes.">
 <link rel="canonical" href="https://flavorsofandalucia.com/bespoke-private-tours-spain/">
@@ -23,6 +17,15 @@
 <meta property="og:url" content="https://flavorsofandalucia.com/bespoke-private-tours-spain/">
 <meta property="og:image" content="https://flavorsofandalucia.com/uploads/10-things-you-cant-miss-in-andalusia-1.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Bespoke Private Tours Spain", "serviceType": "Bespoke luxury private tours and round trips in Spain", "description": "Selected tours and food experiences for your family and small group party. Tailor made down to your wishes.", "url": "https://flavorsofandalucia.com/bespoke-private-tours-spain/", "areaServed": "Spain", "provider": {"@type": "TravelAgency", "name": "Flavors of Andalucia", "url": "https://flavorsofandalucia.com/", "telephone": "+34 637 87 87 68"}}</script>
+
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -305,7 +308,7 @@
         <span>Milano Govinda 35 — 41020 Sevilla</span>
       </div>
     </div>
-    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2025 Flavors of Andalucia</p>
+    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2026 Flavors of Andalucia</p>
   </footer>
   <a href="https://wa.me/34637878768" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0E2440;color:#fff;padding:14px 22px;border-radius:999px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 26px rgba(10,26,46,.28)" style-hover="background:#BC8B2E;color:#241C0C">WhatsApp</a>
 
@@ -368,7 +371,7 @@ class Component extends DCLogic {
       }
     };
     const s = document.createElement("script");
-    s.type = "application/ld+json";
+    s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify(ld);
     document.head.appendChild(s);
   }

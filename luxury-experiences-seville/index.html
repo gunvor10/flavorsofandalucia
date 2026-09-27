@@ -3,13 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
+<!-- seo-fix: static head tags + JSON-LD (tools/seo_fix.py) -->
 <title>Luxury Experiences Seville - Flavors of Andalucia</title>
 <meta name="description" content="Luxury Experiences Seville - Exclusive private experiences with your friends or Family. Gourmet chef at your disposal and exclusive tours.">
 <link rel="canonical" href="https://flavorsofandalucia.com/luxury-experiences-seville/">
@@ -23,6 +17,16 @@
 <meta property="og:url" content="https://flavorsofandalucia.com/luxury-experiences-seville/">
 <meta property="og:image" content="https://flavorsofandalucia.com/uploads/Flavors-of-andalucia-culinary-eperiences-sevilla-5.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "Tailor made luxury travel experiences in Seville and Andalucía", "provider": {"@type": "TravelAgency", "name": "Flavors of Andalucia", "url": "https://flavorsofandalucia.com/"}, "areaServed": "Andalucía, Spain", "url": "https://flavorsofandalucia.com/luxury-experiences-seville/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://flavorsofandalucia.com/luxury-experiences-seville/", "mainEntity": [{"@type": "Question", "name": "What does tailor-made mean in practice?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing is fixed. We start from your dates, your party and what you enjoy, then propose a written programme — guides, tables, transport, tickets — and adjust it until it reads the way you want the trip to feel."}}, {"@type": "Question", "name": "Who will guide us?", "acceptedAnswer": {"@type": "Answer", "text": "Gunvor guides personally where she can, and otherwise hands the day to one of our trusted partner guides: licensed, local, and chosen by her. You are told which before you travel."}}, {"@type": "Question", "name": "Do you arrange more than the experiences?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. As a licensed agency and authorised DMC we can take care of transport, tickets, restaurant tables and the running order of the whole stay."}}, {"@type": "Question", "name": "How far ahead should we get in touch?", "acceptedAnswer": {"@type": "Answer", "text": "As early as you can, especially for Semana Santa and the April feria, when guides, hotels and restaurants in Seville fill up first."}}, {"@type": "Question", "name": "How big a group do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "From a couple to small VIP groups. Larger group and corporate programmes are handled through our travel agencies and groups service."}}, {"@type": "Question", "name": "How do we start?", "acceptedAnswer": {"@type": "Answer", "text": "Write to hello@flavorsofandalucia.com, message +34 637 87 87 68 on WhatsApp, or use the enquiry form. You get a reply from Gunvor, not a call centre."}}]}</script>
+
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JNQWKVPPLZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JNQWKVPPLZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -361,7 +365,7 @@
         <span>Milano Govinda 35 — 41020 Sevilla</span>
       </div>
     </div>
-    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2025 Flavors of Andalucia</p>
+    <p style="max-width:1440px;margin:26px auto 0;font-size:12.5px;color:#8FA9BD">© 2026 Flavors of Andalucia</p>
   </footer>
   <a href="https://wa.me/34637878768" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0E2440;color:#fff;padding:14px 22px;border-radius:999px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 26px rgba(10,26,46,.28)" style-hover="background:#BC8B2E;color:#241C0C">WhatsApp</a>
 
@@ -431,11 +435,11 @@ class Component extends DCLogic {
       url: "https://flavorsofandalucia.com/luxury-experiences-seville/"
     };
     const s = document.createElement("script");
-    s.type = "application/ld+json";
+    s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify(ld);
     document.head.appendChild(s);
     const faqScript = document.createElement("script");
-    faqScript.type = "application/ld+json";
+    faqScript.type = "application/x-ld-json-static-in-head";
     faqScript.textContent = "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"url\":\"https://flavorsofandalucia.com/luxury-experiences-seville/\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What does tailor-made mean in practice?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nothing is fixed. We start from your dates, your party and what you enjoy, then propose a written programme — guides, tables, transport, tickets — and adjust it until it reads the way you want the trip to feel.\"}},{\"@type\":\"Question\",\"name\":\"Who will guide us?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Gunvor guides personally where she can, and otherwise hands the day to one of our trusted partner guides: licensed, local, and chosen by her. You are told which before you travel.\"}},{\"@type\":\"Question\",\"name\":\"Do you arrange more than the experiences?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. As a licensed agency and authorised DMC we can take care of transport, tickets, restaurant tables and the running order of the whole stay.\"}},{\"@type\":\"Question\",\"name\":\"How far ahead should we get in touch?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"As early as you can, especially for Semana Santa and the April feria, when guides, hotels and restaurants in Seville fill up first.\"}},{\"@type\":\"Question\",\"name\":\"How big a group do you work with?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"From a couple to small VIP groups. Larger group and corporate programmes are handled through our travel agencies and groups service.\"}},{\"@type\":\"Question\",\"name\":\"How do we start?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Write to hello@flavorsofandalucia.com, message +34 637 87 87 68 on WhatsApp, or use the enquiry form. You get a reply from Gunvor, not a call centre.\"}}]}";
     document.head.appendChild(faqScript);
   }
