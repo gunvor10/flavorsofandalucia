@@ -96,7 +96,7 @@
       </span>
 
       <a href="../gastronomy-art-blog-sevilla/" style="color:#fff;display:inline-block;padding:6px 0" style-hover="color:#7BE2D8">Inspiration Blog</a>
-      <a href="mailto:hello@flavorsofandalucia.com" style="color:#211E1A;background:#fff;padding:11px 20px;border-radius:1px;letter-spacing:.14em;margin-left:auto" style-hover="background:#1AC5B6;color:#fff">Enquire</a>
+      <a href="../contact/" style="color:#211E1A;background:#fff;padding:11px 20px;border-radius:1px;letter-spacing:.14em;margin-left:auto" style-hover="background:#1AC5B6;color:#fff">Enquire</a>
     </nav>
     <div style="{{ burgerWrap }}">
       <button type="button" onClick="{{ toggleBurger }}" aria-label="Menu" style="display:flex;flex-direction:column;gap:5px;background:transparent;border:0;padding:10px;cursor:pointer">
@@ -129,7 +129,7 @@
         <a href="../travel-guarantee-flavors-of-andalucia/" style="padding:9px 0 9px 2px;font-size:15.5px;letter-spacing:.01em;text-transform:none;color:#211E1A;display:block" style-hover="color:#0C7A71">Travel Guarantee</a>
         <a href="../gastronomy-art-blog-sevilla/" style="padding:20px 0 10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#0C7A71;display:block;border-top:1px solid #E4DDD1;margin-top:8px" style-hover="color:#211E1A">Inspiration Blog</a>
         <span style="display:flex;flex-direction:column;gap:10px;margin-top:22px;padding-top:22px;border-top:1px solid #E4DDD1">
-          <a href="mailto:hello@flavorsofandalucia.com" style="text-align:center;background:#0E2440;color:#fff;padding:14px 20px;font-size:12px;letter-spacing:.18em;text-transform:uppercase" style-hover="background:#0C7A71">Enquire</a>
+          <a href="../contact/" style="text-align:center;background:#0E2440;color:#fff;padding:14px 20px;font-size:12px;letter-spacing:.18em;text-transform:uppercase" style-hover="background:#0C7A71">Enquire</a>
         </span>
       </div>
     </div>
@@ -148,15 +148,20 @@
 
   <section style="padding:100px clamp(20px,5vw,48px);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:80px;align-items:start">
     <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:24px"><input type="text" name="_gotcha" tabindex="-1" autoComplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><input type="hidden" name="site" value="flavorsofandalucia.com"><input type="hidden" name="_subject" value="Contact enquiry — Flavors of Andalucia">
+      <sc-if value="{{ hasTour }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:0;display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Your enquiry</span><span style="font-family:'Prata',serif;font-size:19px;line-height:1.35;color:#0C7A71">{{ tourName }}</span></p>
+        <input type="hidden" name="tour" value="{{ tourName }}">
+      </sc-if>
       <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Name</span><input name="name" type="text" required="required" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
       <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Email</span><input name="email" type="email" required="required" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
-      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Phone Number</span><input name="phone" type="tel" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
-      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Date</span><input name="date" type="date" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
-      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Tour Availability</span><input name="tour" type="text" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
-      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Subject</span><input name="subject" type="text" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
-      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Message</span><textarea name="message" rows="5" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none;resize:vertical"></textarea></label>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:24px">
+        <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Date</span><input name="date" type="date" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
+        <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Number of people</span><input name="party_size" type="number" min="1" placeholder="2" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none"></label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Message (optional)</span><textarea name="message" rows="4" style="border:0;border-bottom:1px solid #C9C0B1;background:transparent;padding:12px 2px;font-family:'Heebo',sans-serif;font-size:16px;color:#211E1A;outline:none;resize:vertical"></textarea></label>
       <button type="submit" style="align-self:flex-start;border:0;background:#0E2440;color:#fff;padding:16px 38px;font-family:'Heebo',sans-serif;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;cursor:pointer" style-hover="background:#BC8B2E;color:#241C0C">Send</button>
       <p style="margin:0;font-size:13px;color:#8A8275;min-height:20px">{{ formNote }}</p>
+      <p style="margin:0;padding-top:20px;border-top:1px solid #E4DDD1;font-size:15px;line-height:1.7;color:#453F37">Prefer email? Write to hello@flavorsofandalucia.com</p>
     </form>
     <div>
       <img src="../uploads/gunvor-portrait.jpg" alt="Gunvor Guttormsen, founder of Flavors of Andalucia" style="width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;display:block;border-radius:8px" loading="lazy" decoding="async">
@@ -311,8 +316,9 @@ class Component extends DCLogic {
     };
   }
 
-  state = { note: "" };
+  state = { note: "", tour: "" };
   componentDidMount() {
+    try { const t = new URLSearchParams(window.location.search).get("tour"); if (t) this.setState({ tour: t.slice(0, 120) }); } catch (e) {}
     const s = document.createElement("script");
     s.type = "application/x-ld-json-static-in-head";
     s.textContent = JSON.stringify({
@@ -409,7 +415,9 @@ class Component extends DCLogic {
   renderVals() {
     return { ...this.navVals(),
       formNote: this.state.note,
-      onSubmit: (e) => { e.preventDefault(); const form = e.target; const fd = new FormData(form); this.setState({ note: "Sending…" }); fetch(FORM_ENDPOINT, { method: "POST", body: fd, headers: { Accept: "application/json" } }).then(r => { if (r.ok) { form.reset(); this.setState({ note: "Thank you — we will reply within 24 hours." }); } else { this.setState({ note: "Something went wrong. Please email hello@flavorsofandalucia.com." }); } }).catch(() => this.setState({ note: "Something went wrong. Please email hello@flavorsofandalucia.com." })); }
+      hasTour: !!this.state.tour,
+      tourName: this.state.tour,
+      onSubmit: (e) => { e.preventDefault(); const form = e.target; const fd = new FormData(form); this.setState({ note: "Sending…" }); fetch(FORM_ENDPOINT, { method: "POST", body: fd, headers: { Accept: "application/json" } }).then(r => { if (r.ok) { form.reset(); this.setState({ note: "Thank you — Gunvor will reply within 24 hours." }); } else { this.setState({ note: "Something went wrong. Please email hello@flavorsofandalucia.com." }); } }).catch(() => this.setState({ note: "Something went wrong. Please email hello@flavorsofandalucia.com." })); }
     };
   }
 }
