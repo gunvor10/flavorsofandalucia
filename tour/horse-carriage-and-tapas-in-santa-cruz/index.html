@@ -184,8 +184,8 @@
         <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;background:#F1EBE0;border-radius:8px;padding:30px 34px">
           <img src="../../uploads/gunvor-portrait.jpg" alt="Gunvor Guttormsen" style="width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;flex:0 0 auto" loading="lazy" decoding="async">
           <div style="flex:1 1 300px;min-width:0">
-            <p style="margin:0 0 8px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Your guide</p>
-            <p style="margin:0;font-size:17px;line-height:1.75;color:#453F37;font-weight:400;max-width:60ch">This tour is guided by me, <strong style="font-weight:500;color:#211E1A">Gunvor Guttormsen</strong> — Norwegian, in Seville for over 30 years and an officially licensed guide. You write to me directly, and I answer you myself. <a href="../../about-us/">More about me</a></p>
+            <p style="margin:0 0 8px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Your contact</p>
+            <p style="margin:0;font-size:17px;line-height:1.75;color:#453F37;font-weight:400;max-width:60ch">This experience is organised and quality checked by me, <strong style="font-weight:500;color:#211E1A">Gunvor Guttormsen</strong>, and carried out by our <strong style="font-weight:500;color:#211E1A">trusted partners</strong>: licensed, local professionals I have chosen personally and worked with for years. I plan it with you and stay your contact throughout. <a href="../../about-us/">More about how we work</a></p>
           </div>
         </div>
       </sc-if>
@@ -194,8 +194,8 @@
         <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;background:#F1EBE0;border-radius:8px;padding:30px 34px">
           <img src="../../uploads/gunvor-portrait.jpg" alt="Gunvor Guttormsen" style="width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;flex:0 0 auto" loading="lazy" decoding="async">
           <div style="flex:1 1 300px;min-width:0">
-            <p style="margin:0 0 8px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Your guide</p>
-            <p style="margin:0;font-size:17px;line-height:1.75;color:#453F37;font-weight:400;max-width:60ch">This experience is in the hands of one of our <strong style="font-weight:500;color:#211E1A">trusted partner guides</strong> — licensed, local and chosen by me personally, people I have worked with for years and would send my own family to. I plan the day with you and stay your contact throughout. <a href="../../about-us/">More about how we work</a></p>
+            <p style="margin:0 0 8px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8275">Your contact</p>
+            <p style="margin:0;font-size:17px;line-height:1.75;color:#453F37;font-weight:400;max-width:60ch">This experience is organised and quality checked by me, <strong style="font-weight:500;color:#211E1A">Gunvor Guttormsen</strong>, and carried out by our <strong style="font-weight:500;color:#211E1A">trusted partners</strong>: licensed, local professionals I have chosen personally and worked with for years. I plan it with you and stay your contact throughout. <a href="../../about-us/">More about how we work</a></p>
           </div>
         </div>
       </sc-if>
@@ -404,7 +404,7 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;guidedBy&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;gunvor&quot;,&quot;partner&quot;],&quot;default&quot;:&quot;gunvor&quot;,&quot;tsType&quot;:&quot;'gunvor' | 'partner'&quot;,&quot;section&quot;:&quot;Tour setup&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;guidedBy&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;gunvor&quot;,&quot;partner&quot;],&quot;default&quot;:&quot;partner&quot;,&quot;tsType&quot;:&quot;'gunvor' | 'partner'&quot;,&quot;section&quot;:&quot;Tour setup&quot;}}">
 const FORM_ENDPOINT = "https://formspree.io/f/xjyvdbbe";
 class Component extends DCLogic {
   
@@ -458,7 +458,7 @@ class Component extends DCLogic {
     { k: "Price", v: "375 € per group + 59 € per person" }
   ];
   assurances = [
-    "Officially licensed guide",
+    "Organised and quality checked by Gunvor",
     "Private — never shared with other guests",
     "No prepayment when you enquire",
     "Personal reply within 24 hours"
@@ -597,8 +597,8 @@ class Component extends DCLogic {
       gallery: this.gallery,
       itinerary: this.itinerary,
       assurances: this.assurances,
-      guidedByGunvor: (this.props.guidedBy ?? "gunvor") === "gunvor",
-      guidedByPartner: (this.props.guidedBy ?? "gunvor") === "partner",
+      guidedByGunvor: (this.props.guidedBy ?? "partner") === "gunvor",
+      guidedByPartner: (this.props.guidedBy ?? "partner") === "partner",
       enquiryNote: this.state.enquiryNote,
       onEnquire: (e) => { e.preventDefault(); const form = e.target; const fd = new FormData(form); this.setState({ enquiryNote: "Sending…" }); fetch(FORM_ENDPOINT, { method: "POST", body: fd, headers: { Accept: "application/json" } }).then(r => { if (r.ok) { form.reset(); this.setState({ enquiryNote: "Thank you — Gunvor will reply within 24 hours." }); } else { this.setState({ enquiryNote: "Something went wrong. Please email hello@flavorsofandalucia.com." }); } }).catch(() => this.setState({ enquiryNote: "Something went wrong. Please email hello@flavorsofandalucia.com." })); },
       related: this.related
