@@ -25,7 +25,10 @@ Netlify or Cloudflare Pages work the same way: drag the folder in, no build comm
 - Contact, tour-enquiry and newsletter forms post to Formspree
   (`https://formspree.io/f/xjyvdbbe`) by fetch, with a hidden
   `site=flavorsofandalucia.com` field and a `_gotcha` honeypot.
-- GA4 `G-JNQWKVPPLZ` is on all 36 pages.
+- GA4 `G-JNQWKVPPLZ` is on all pages, with a cookie banner: nothing is stored until the
+  visitor clicks Accept. Cloudflare Web Analytics (cookieless) counts every visitor.
+  After every new Claude Design download run `python3 tools/seo_fix.py` and then
+  `python3 tools/analytics_consent.py --cf-token TOKEN`.
 
 ## Before pointing DNS at this
 
