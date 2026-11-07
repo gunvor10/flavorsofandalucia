@@ -7,6 +7,9 @@ all pages, so the rules below are enforced by two scripts in `tools/` that run o
 1. Download the new version from Claude Design (zip lands in `~/Downloads`).
 2. Copy the zip's `site/` contents over this folder (do **not** delete `tools/`, `.github/`, `SEO-RULES.md`).
 3. `python3 tools/seo_fix.py` — moves head tags into `<head>`, writes static JSON-LD, switches off the runtime copy.
+   Then `python3 tools/analytics_consent.py` (Google tag + cookie banner) and
+   `python3 tools/google_ads.py` (Google Ads AW-18561575179: one conversion per successfully
+   sent enquiry form; banner asks for statistics + ad-measurement cookies). Both are safe to rerun.
 4. `python3 tools/seo_check.py` — must say "passed" before pushing.
 5. Commit and push → Plesk deploys automatically (GitHub webhook). The same check also runs on GitHub on every push.
 
