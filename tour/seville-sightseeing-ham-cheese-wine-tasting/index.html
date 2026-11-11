@@ -615,5 +615,40 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 try{localStorage.removeItem('foa-consent');}catch(x){}gtag('consent','update',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied'});
 document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n.indexOf('_ga')===0||n.indexOf('_gid')===0||n.indexOf('_gat')===0||n.indexOf('_gcl')===0){document.cookie=n+'=;Max-Age=0;path=/';document.cookie=n+'=;Max-Age=0;path=/;domain=.flavorsofandalucia.com';}});b.hidden=false;});})();
 </script>
+<!-- ga-events (tools/ga_events.py) -->
+<script>
+(function(){
+function ev(n,p){try{if(window.gtag)gtag('event',n,p);}catch(e){}}
+function page(){return location.pathname;}
+function tourOf(f){var t=f&&f.querySelector&&f.querySelector('input[name="tour"]');var v=t?t.value:'';return v&&v.indexOf('{'+'{')<0?v:'';}
+var AFF=["naturanda.com", "devourtours.com", "cookingpaella.com"];
+function affiliate(h){for(var i=0;i<AFF.length;i++){var d=AFF[i];if(h===d||h.slice(-d.length-1)==='.'+d)return d;}return '';}
+document.addEventListener('click',function(e){
+  var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;
+  var u;try{u=new URL(a.getAttribute('href'),location.href);}catch(x){return;}
+  var txt=(a.innerText||a.getAttribute('aria-label')||'').replace(/\s+/g,' ').trim().slice(0,100);
+  var aff=affiliate(u.hostname);
+  if(u.hostname==='wa.me'||u.hostname==='api.whatsapp.com'){ev('whatsapp_click',{link_text:txt,page_path:page()});}
+  else if(aff){ev('affiliate_click',{partner:aff,link_url:u.origin+u.pathname,link_text:txt,page_path:page()});}
+  else if(u.hostname===location.hostname||u.hostname==='flavorsofandalucia.com'){
+    var m=u.pathname.match(/\/tour\/([^\/]+)/);
+    if(m&&u.pathname!==location.pathname){ev('tour_click',{tour:m[1],link_text:txt,page_path:page()});}
+    else if(/\/contact\/?$/.test(u.pathname)){ev('contact_click',{link_text:txt,page_path:page()});}
+  }
+},true);
+var started={};
+document.addEventListener('input',function(e){
+  var f=e.target&&e.target.form;if(!f||started[page()])return;started[page()]=1;
+  ev('form_start',{page_path:page(),tour:tourOf(f)});
+},true);
+var lastTour='';
+document.addEventListener('submit',function(e){lastTour=tourOf(e.target);ev('enquiry_submit',{page_path:page(),tour:lastTour});},true);
+window.__foaFetch=window.fetch;
+if(window.__foaFetch){window.fetch=function(u,o){var p=window.__foaFetch.apply(this,arguments);
+  try{if(o&&String(o.method).toUpperCase()==='POST'&&/formspree\.io/.test(String(u))){var t=lastTour;
+    p.then(function(r){if(r&&r.ok)ev('generate_lead',{page_path:page(),tour:t,value:1,currency:'EUR'});},function(){});}}catch(x){}
+  return p;};}
+})();
+</script>
 </body>
 </html>
