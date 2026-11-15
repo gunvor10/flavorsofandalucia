@@ -1,0 +1,12 @@
+# Flavors of Andalucia – static site from Claude Design. Keep this file (added 2026-11-15).
+#
+# 1. Turning the rewrite engine on here stops the old WordPress rules in the parent
+#    folder (/flavorsofandalucia.com/.htaccess → /index.php, which no longer exists).
+#    Those rules made every missing page loop and return "500 Server error" to Google.
+# 2. www.flavorsofandalucia.com → flavorsofandalucia.com (one address for Google).
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.flavorsofandalucia\.com$ [NC]
+RewriteRule ^(.*)$ https://flavorsofandalucia.com/$1 [R=301,L]
+
+# Missing pages: plain "404 Not found" (Google then drops old WordPress addresses).
+ErrorDocument 404 default
