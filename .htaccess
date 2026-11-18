@@ -8,5 +8,14 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.flavorsofandalucia\.com$ [NC]
 RewriteRule ^(.*)$ https://flavorsofandalucia.com/$1 [R=301,L]
 
+# 3. Old WordPress pages that Google still sends visitors to → closest new page (2026-11-18)
+RewriteRule ^2020/01/09/5-charming-bodegas-in-seville/?$ https://flavorsofandalucia.com/2020/05/20/8-best-restaurants-in-seville/ [R=301,L]
+RewriteRule ^2023/09/24/seville-the-beginning-true-love/?$ https://flavorsofandalucia.com/gastronomy-art-blog-sevilla/ [R=301,L]
+RewriteRule ^destination-wedding-planner-seville/?$ https://sevillaevent.com/ [R=301,L]
+RewriteRule ^destination-management-services-in-seville/?$ https://flavorsofandalucia.com/travel-agencies-and-group-travel-seville/ [R=301,L]
+RewriteRule ^tour/private-horse-carriage-and-tapas-tour/?$ https://flavorsofandalucia.com/tour/horse-carriage-and-tapas-in-santa-cruz/ [R=301,L]
+RewriteRule ^luxury-apartments-seville/?$ https://flavorsofandalucia.com/luxury-experiences-seville/ [R=301,L]
+RewriteRule ^tour/seville-your-first-day-sightseeing/?$ https://flavorsofandalucia.com/tour/seville-sightseeing-ham-cheese-wine-tasting/ [R=301,L]
+
 # Missing pages: plain "404 Not found" (Google then drops old WordPress addresses).
 ErrorDocument 404 default
