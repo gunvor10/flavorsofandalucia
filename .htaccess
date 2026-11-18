@@ -17,11 +17,12 @@ RewriteRule ^tour/private-horse-carriage-and-tapas-tour/?$ https://flavorsofanda
 RewriteRule ^luxury-apartments-seville/?$ https://flavorsofandalucia.com/luxury-experiences-seville/ [R=301,L]
 RewriteRule ^tour/seville-your-first-day-sightseeing/?$ https://flavorsofandalucia.com/tour/seville-sightseeing-ham-cheese-wine-tasting/ [R=301,L]
 
-# 4. Day-trip cards on food-destinations/ with no own page → Naturanda affiliate tours (2026-11-18).
+# 4. Day-trip cards on food-destinations/ with no own page → our blog posts, which have the Naturanda affiliate button
+#    and a big "private tour? contact us" box (2026-11-18).
 #    302 = temporary, so these addresses can become our own "Private tours in …" pages later.
-RewriteRule ^tour/private-day-trip-to-granada-alhambra-from-seville/?$ https://naturanda.com/excursion-a-granada-y-la-alhambra-desde-sevilla/?ttafid=51090 [R=302,L]
-RewriteRule ^tour/private-day-trip-to-cordoba-from-seville/?$ https://naturanda.com/excursion-cordoba-desde-sevilla/?ttafid=51090 [R=302,L]
-RewriteRule ^tour/private-day-trip-to-ronda-from-seville/?$ https://naturanda.com/excursion-a-los-pueblos-blancos-y-ronda-desde-sevilla/?ttafid=51090 [R=302,L]
+RewriteRule ^tour/private-day-trip-to-granada-alhambra-from-seville/?$ https://flavorsofandalucia.com/2023/12/18/8-things-you-must-see-in-granada/ [R=302,L]
+RewriteRule ^tour/private-day-trip-to-cordoba-from-seville/?$ https://flavorsofandalucia.com/2024/03/12/day-trip-to-cordoba-from-seville/ [R=302,L]
+RewriteRule ^tour/private-day-trip-to-ronda-from-seville/?$ https://flavorsofandalucia.com/2024/07/09/day-trip-to-ronda-and-the-white-villages-from-seville/ [R=302,L]
 
 # Missing pages: plain "404 Not found" (Google then drops old WordPress addresses).
 ErrorDocument 404 default
